@@ -3,10 +3,13 @@
 1st. Donwloaded Kafka for Windows 10 from https://kafka.apache.org/downloads by following the steps from this useful video(I am a visual lerner) https://www.youtube.com/watch?v=BwYFuhVhshI&ab_channel=AmpCodehM 
 2nd. Downloaded FFmpeg for Windows 10 from https://github.com/btbn/ffmpeg-builds/releases by following this video https://www.youtube.com/watch?v=SG1Fc5QB8RE&ab_channel=TechwithM
 3rd. Downloaded yt-dlp by running(as I have Python) --> pip install yt-dlp 
+For New Node.js Project run the following commands in Visual Studio terminal --> npm init -y
+For Install Required Node Packages run the following commands in Visual Studio terminal --> npm install kafkajs fluent-ffmpeg @types/node
 4th. Started the " zookeeper-server ". Opened new CMD terminal, accessed the path C:\Kafka and run --> .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 5th. Started the " kafka-server ". Opened new CMD terminal, accessed the path C:\Kafka again and run --> .\bin\windows\kafka-server-start.bat .\config\server.properties
 6th. Created a topic call " video-events ". Opened new CMD terminal, accessed the path C:\Kafka\bin\windows and run -->  kafka-topics.bat --create --bootstrap-server localhost:9092 --topic video-events
 7th. Started the " Kafka Console Consumer " in CMD new terminal by running --> node videoPipeline.js consumer
+- also, 3 folders will be created, temp, temp_encoded and storage folders.
 8th. Started the " Kafka Console Producer" in CMD new terminal by running --> node videoPipeline.js producer
 
 ---- Process ---
@@ -23,11 +26,9 @@ Then copied, encoded(3 formats - "avi", "webm", "mp4"/mkv didn't work for some r
 
 --- NOTE ---
 
-I left the videos in the folders as proof of what I wrote above but it seems I cannot push with git the videos as I reached the max file size, so I had to delete them. Same with New Node.js Project(package.json) and Installed Required Node Packages. 
-If you need the New Node.js Project and Install Required Node Packages the run the below commands in Visual Studio terminal:
+I left the videos in the folders as proof of what I wrote above but it seems I cannot push with git the videos as I reached the max file size, so I had to delete them. Also, take in mind that the encoding of the videos might take a while,
+so if you dont see progress, just wait a bit and the videos will populate, especially the .webm one.
 
-For New Node.js Project run the following commands in Visual Studio terminal --> npm init -y
-For Install Required Node Packages run the following commands in Visual Studio terminal --> npm install kafkajs fluent-ffmpeg @types/node
 
 
 If you want to validate the process then you can try to follow the --- Tutorial ---
